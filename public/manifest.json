@@ -1,0 +1,19 @@
+{
+  "name": "TurfBD - Sports Turf Booking",
+  "short_name": "TurfBD",
+  "description": "Book sports turf easily across Bangladesh",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071A0D",
+  "theme_color": "#16A34A",
+  "orientation": "portrait",
+
+  "icons": [
+    {
+      "src": "/turflogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
