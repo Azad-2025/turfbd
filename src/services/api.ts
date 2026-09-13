@@ -1,6 +1,6 @@
 import { Turf, Booking, Review, User, UserRole, SportType, AppNotification } from '../types';
 
-const API_BASE = '/api';
+const API_BASE = 'https://turfbd-api.onrender.com';
 
 let authToken: string | null = typeof window !== 'undefined' ? localStorage.getItem('turfbd_auth_token') : null;
 let refreshToken: string | null = typeof window !== 'undefined' ? localStorage.getItem('turfbd_refresh_token') : null;
