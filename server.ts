@@ -21,7 +21,7 @@ dotenv.config();
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = Number(process.env.PORT) || 3000;
 
   // CORS headers support for multi-environment MVP deployment (e.g., Vercel frontend + Render backend)
   app.use((req, res, next) => {
