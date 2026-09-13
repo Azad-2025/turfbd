@@ -1,3 +1,4 @@
+import InstallPWA from "./components/InstallPWA";
 import React, { useState, useEffect } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import { Navbar } from './components/Navbar';
@@ -317,6 +318,7 @@ const MainApp: React.FC = () => {
 export default function App() {
   return (
     <AppProvider>
+      <InstallPWA />
       <MainApp />
     </AppProvider>
   );
