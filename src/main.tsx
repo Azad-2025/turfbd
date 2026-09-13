@@ -1,7 +1,27 @@
-import {StrictMode} from 'react';
-import {createRoot} from 'react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+
+// Register TurfBD PWA Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/service-worker.js')
+      .then((registration) => {
+        console.log(
+          'TurfBD PWA Service Worker registered:',
+          registration.scope
+        );
+      })
+      .catch((error) => {
+        console.error(
+          'TurfBD PWA Service Worker registration failed:',
+          error
+        );
+      });
+  });
+}
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
