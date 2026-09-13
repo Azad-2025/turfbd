@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" fill="none">
+  <defs>
+    <!-- Metallic Green Pin/Shield Gradients -->
+    <linearGradient id="shieldOuterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B6A34" />
+      <stop offset="40%" stop-color="#0D4820" />
+      <stop offset="80%" stop-color="#062D13" />
+      <stop offset="100%" stop-color="#041D0C" />
+    </linearGradient>
+    <linearGradient id="shieldBevelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#42985D" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#114D24" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#021508" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Lime Checkmark Gradients -->
+    <linearGradient id="checkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A3FF3B" />
+      <stop offset="40%" stop-color="#78D81C" />
+      <stop offset="100%" stop-color="#4EA008" />
+    </linearGradient>
+    <linearGradient id="checkHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7" />
+      <stop offset="60%" stop-color="#78D81C" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Metallic Copper / Bronze-Rose Wordmark Gradients -->
+    <linearGradient id="copperWordGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E3B69E" />
+      <stop offset="25%" stop-color="#D19B7F" />
+      <stop offset="50%" stop-color="#BA7E62" />
+      <stop offset="75%" stop-color="#C78D71" />
+      <stop offset="100%" stop-color="#925B42" />
+    </linearGradient>
+    <linearGradient id="copperHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="100%" stop-color="#502919" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Subtitle Slate Gradient -->
+    <linearGradient id="taglineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6C7D8B" />
+      <stop offset="100%" stop-color="#475560" />
+    </linearGradient>
+
+    <!-- Filters for 3D depth and shadow -->
+    <filter id="dropShadowPin" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+    <filter id="glowLime" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#78D81C" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- 1. Central Metallic Green Shield / Location Pin -->
+  <g transform="translate(250, 195)" filter="url(#dropShadowPin)">
+    <!-- Outer Shield Silhouette -->
+    <path
+      d="M -62 -75
+         C -62 -115, -45 -135, 0 -135
+         C 45 -135, 62 -115, 62 -75
+         C 62 -20, 36 28, 0 85
+         C -36 28, -62 -20, -62 -75
+         Z"
+      fill="url(#shieldOuterGrad)"
+      stroke="url(#shieldBevelGrad)"
+      stroke-width="7"
+    />
+
+    <!-- Inner Cavity / Goal aperture -->
+    <path
+      d="M -38 -65
+         C -38 -95, -26 -110, 0 -110
+         C 26 -110, 38 -95, 38 -65
+         C 38 -25, 20 8, 0 45
+         C -20 8, -38 -25, -38 -65
+         Z"
+      fill="#041A0B"
+      opacity="0.9"
+    />
+
+    <!-- Subtle White Net/Crossbar Aperture Contour at top -->
+    <path
+      d="M -28 -80
+         C -28 -95, -15 -102, 0 -102
+         C 15 -102, 28 -95, 28 -80
+         C 20 -72, 10 -68, 0 -68
+         C -10 -68, -20 -72, -28 -80
+         Z"
+      fill="#FFFFFF"
+      opacity="0.95"
+    />
+
+    <!-- Volumetric Glossy 3D Lime Checkmark -->
+    <path
+      d="M -20 -28
+         L -2 -10
+         L 32 -48"
+      fill="none"
+      stroke="url(#checkGrad)"
+      stroke-width="16"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      filter="url(#glowLime)"
+    />
+    <!-- Checkmark Highlight Glaze -->
+    <path
+      d="M -20 -28
+         L -2 -10
+         L 32 -48"
+      fill="none"
+      stroke="url(#checkHighlight)"
+      stroke-width="7"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <!-- 2. Metallic Copper Rose-Gold Brand Wordmark "TurfBD" -->
+  <text
+    x="250"
+    y="345"
+    text-anchor="middle"
+    font-family="'Plus Jakarta Sans', Inter, -apple-system, sans-serif"
+    font-size="74"
+    font-weight="800"
+    letter-spacing="-1"
+    fill="url(#copperWordGrad)"
+    style="filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.3));"
+  >TurfBD</text>
+
+  <!-- 3. Subtitle / Tagline: "Sports Turf Booking" -->
+  <text
+    x="250"
+    y="385"
+    text-anchor="middle"
+    font-family="'Plus Jakarta Sans', Inter, -apple-system, sans-serif"
+    font-size="24"
+    font-weight="600"
+    letter-spacing="0.5"
+    fill="url(#taglineGrad)"
+  >Sports Turf Booking</text>
+</svg>
